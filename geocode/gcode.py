@@ -1,10 +1,11 @@
 from geopy import geocoders
 from pymongo import MongoClient
 from time import sleep
+from sys import argv
 
-dbip = 'mongodb://71.80.124.122:27017' #database ip goes here
+script, dbip = argv
 
-client = MongoClient(dbip)
+client = MongoClient('mongodb://'dbip)
 db = client.Kickstarter
 collection = db.users
 

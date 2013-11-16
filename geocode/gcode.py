@@ -5,7 +5,7 @@ from sys import argv
 
 script, dbip = argv
 
-client = MongoClient('mongodb://'dbip)
+client = MongoClient('mongodb://',dbip)
 db = client.Kickstarter
 collection = db.users
 
